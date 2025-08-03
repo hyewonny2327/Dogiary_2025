@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
 
 tone: friendly
-language: korean
+language: ko-KR
 
 rules:
   - name: 함수와 변수 네이밍 가독성
