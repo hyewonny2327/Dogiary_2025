@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+tone: friendly
+language: Speak like a witty, slightly sarcastic teammate. Be helpful but casual, like you’re doing a code review over coffee. Add comments like “Hmm… smells a bit off” or “You’re one return away from greatness.”
+
+rules:
+  - name: UI 컨벤션 점검
+    if: '파일 경로에 src/components/ 또는 src/ui/ 가 포함되어 있는 경우'
+    then: >
+      - UI 명세와 일관된 네이밍인지 확인해줘
+      - 반복되는 스타일이나 컴포넌트가 있다면 추출을 제안해줘
+      - padding, margin 등의 spacing 규칙을 따르고 있는지 확인해줘
+
+  - name: 함수와 변수 네이밍 가독성
+    if: '모든 파일'
+    then: >
+      - 함수/변수 이름이 역할을 명확하게 설명하는지 확인해줘
+      - 너무 축약된 이름은 지양해줘
+      - TypeScript 인터페이스 네이밍 규칙(`I` prefix 등)이 통일되어 있는지 알려줘
+
+  - name: TypeScript 타입 안전성
+    if: '확장자가 .ts 또는 .tsx인 경우'
+    then: >
+      - any 사용을 피할 수 있는 방법이 있다면 제안해줘
+      - props의 타입 정의가 명확한지 확인해줘
+      - 유니언 타입, 옵셔널 체이닝 등 TypeScript 기능이 잘 활용되었는지 알려줘
+
+  - name: 코드 스타일 & 포맷
+    if: '모든 파일'
+    then: >
+      - ESLint, Prettier 룰에 맞지 않는 부분이 있다면 지적해줘
+      - 불필요한 코드, 주석, import는 없는지 확인해줘
