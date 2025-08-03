@@ -1,12 +1,28 @@
+'use client';
+import React, { useState } from 'react';
 import MainLayout from '@/components/common/MainLayout';
+import SideCategory from '@/components/common/SideCategory';
 import Image from 'next/image';
+import { FaHome, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {
+  const menus = [
+    { name: 'Home', path: '/', icon: FaHome },
+    { name: 'About', path: '/about', icon: FaInfoCircle },
+    { name: 'Contact', path: '/contact', icon: FaEnvelope },
+  ];
+  const [activeMenu, setActiveMenu] = useState(menus[0].name);
   return (
     <MainLayout
       title="Create Next App"
       subtitle="Welcome to your Next.js app"
-      sidebar={<div className="bg-amber-200">Sidebar content</div>}
+      sidebar={
+        <SideCategory
+          menus={menus}
+          activeMenu={activeMenu}
+          setActiveMenu={setActiveMenu}
+        ></SideCategory>
+      }
     >
       <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-sans sm:p-20">
         <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
