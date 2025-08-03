@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+tone: friendly
+language: ko-KR
+
+rules:
+  - name: 함수와 변수 네이밍 가독성
+    if: true
+    then:
+      - Ensure functions/variables have clear, descriptive names.
+      - Avoid overly short or cryptic names.
+      - Check if TypeScript interface names follow consistent conventions (e.g., `I` prefix or not).
+
+  - name: TypeScript 타입 안전성
+    if: |
+      filepath.endsWith(".ts") || filepath.endsWith(".tsx")
+    then:
+      - Suggest avoiding the use of `any` where possible.
+      - Check if props types are explicitly and clearly defined.
+      - Encourage proper use of union types, optional chaining, and advanced TypeScript features.
+
+  - name: 코드 스타일 & 포맷
+    if: true
+    then:
+      - Flag any non-compliant code based on ESLint and Prettier rules.
+      - Identify unnecessary comments, unused code or imports.
