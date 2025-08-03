@@ -8,7 +8,7 @@ type MainLayoutProps = {
 const MainLayout = ({ title, subtitle, children, sidebar }: MainLayoutProps) => {
   return (
     <div className="h-[calc(100vh-var(--header-height))] w-full bg-[var(--background)]">
-      <div className="mx-auto flex max-w-[1280px] flex-col gap-10">
+      <div className="mx-auto mt-10 flex max-w-[1280px] flex-col gap-10">
         {title && <h1 className="text-4xl font-bold text-[var(--color-text-base)]">{title}</h1>}
         <section className="flex w-full gap-6">
           {/* 사이드 바 */}
