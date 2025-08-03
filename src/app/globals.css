@@ -11,6 +11,7 @@
   --color-text-title: #5f5013;
   --color-text-muted: #a49787;
   --color-text-base: #00040b;
+  --header-height: 5.25rem;
 }
 
 @theme inline {
