@@ -9,6 +9,7 @@ import Button from '@/components/common/Button';
 import Chip from '@/components/common/Chip';
 import Input from '@/components/common/Input';
 import Select from '@/components/common/Select';
+import FormItem from '@/components/common/FormItem';
 
 export default function Home() {
   const menus = [
@@ -41,15 +42,17 @@ export default function Home() {
             setInputValue={setInputValue}
             type="number"
           />
-          <Select
-          selectedItem={selectedItem}
-          setSelectedItem = {setSelectedItem}
-          options={[
-            { label: 'Option 1', value: '1' },
-            { label: 'Option 2', value: '2' },
-            { label: 'Option 3', value: '3' },
-          ]}
-          />
+          <FormItem label="이메일" error={inputValue ? '' : '이메일을 입력해주세요'}>
+            <Select
+              selectedItem={selectedItem}
+              setSelectedItem={setSelectedItem}
+              options={[
+                { label: 'Option 1', value: '1' },
+                { label: 'Option 2', value: '2' },
+                { label: 'Option 3', value: '3' },
+              ]}
+            />
+          </FormItem>
           <Button
             variant="dark"
             size="fit"
