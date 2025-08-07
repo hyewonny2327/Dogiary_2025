@@ -30,6 +30,24 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <Image src="/next.svg" alt="Next.js Logo" width={180} height={37} className="mb-4" />
           <div>안녕하세요 카드입니다.</div>
+          <Button
+            variant="dark"
+            size="fit"
+            onClick={() => alert('Button Clicked!')}
+            icon={FaEnvelope}
+            isRound={true}
+          >
+            Click Me
+          </Button>
+          <Button
+            variant="sand"
+            size="fit"
+            onClick={() => alert('Button Clicked!')}
+            icon={FaEnvelope}
+            isRound={true}
+          >
+            Click Me
+          </Button>
         </div>
       </Card>
     </MainLayout>
