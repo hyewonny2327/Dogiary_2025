@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { FaHome, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import Card from '@/components/common/Card';
 import Button from '@/components/common/Button';
+import Chip from '@/components/common/Chip';
 
 export default function Home() {
   const menus = [
@@ -48,6 +49,7 @@ export default function Home() {
           >
             Click Me
           </Button>
+          <Chip>Custom Chip</Chip>
         </div>
       </Card>
     </MainLayout>
