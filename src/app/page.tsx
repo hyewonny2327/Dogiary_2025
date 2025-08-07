@@ -5,6 +5,7 @@ import SideCategory from '@/components/common/SideCategory';
 import Image from 'next/image';
 import { FaHome, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import Card from '@/components/common/Card';
+import Button from '@/components/common/Button';
 
 export default function Home() {
   const menus = [
