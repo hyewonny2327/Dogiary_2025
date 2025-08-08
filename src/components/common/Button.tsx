@@ -1,7 +1,7 @@
 import { IconType } from 'react-icons';
 type ButtonProps = {
   children: React.ReactNode;
-  variant?: 'dark' | 'light' | `sand`;
+  variant?: 'dark' | 'light' | 'sand';
   size?: 'fit' | 'full';
   onClick: () => void;
   isDisabled?: boolean;

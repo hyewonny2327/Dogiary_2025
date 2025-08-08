@@ -1,5 +1,4 @@
 type inputProps = {
-  children?: React.ReactNode;
   placeholder?: string;
   inputValue: string;
   setInputValue: (value: string) => void;

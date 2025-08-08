@@ -11,6 +11,8 @@ const Card = ({ children, size, subtitle, isColored }: CardProps) => {
         return 'px-6 py-4';
       case 'default':
         return 'px-20 py-8';
+      default:
+        return 'px-20 py-8';
     }
   };
   const getBackgroundColor = () => (isColored ? 'bg-[var(--color-card)]' : 'bg-white');
@@ -20,7 +22,7 @@ const Card = ({ children, size, subtitle, isColored }: CardProps) => {
     <div
       className={`flex flex-col ${getPaddingSize()} ${getBackgroundColor()} rounded-2xl border border-[var(--color-border)] shadow-sm`}
     >
-      <div className={`text-2xl ${getSubtitleColor()} font-semibold`}>{subtitle}</div>
+      {subtitle && <div className={`text-2xl ${getSubtitleColor()} font-semibold`}>{subtitle}</div>}
       <div>{children}</div>
     </div>
   );

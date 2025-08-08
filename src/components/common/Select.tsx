@@ -11,7 +11,7 @@ const Select = ({ options, selectedItem, setSelectedItem }: selectProps) => {
       className="w-full rounded-lg border-2 border-[var(--color-border)] px-4 py-2 focus:border-2 focus:border-[var(--color-button-dark)] focus:outline-none"
     >
       {options.map((option, index) => (
-        <option key={index} value={option.value}>
+        <option key={`${option.value}_${index}`} value={option.value}>
           {option.label}
         </option>
       ))}

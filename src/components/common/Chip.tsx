@@ -1,18 +1,12 @@
 type ChipProps = {
   children: React.ReactNode;
-  background?: string;
-  textColor?: string;
-  borderColor?: string;
+  className?: string;
 };
-const Chip = ({
-  children,
-  background = 'var(--color-button-sand)',
-  textColor = 'var(--color-text-muted)',
-  borderColor = 'var(--color-border)',
-}: ChipProps) => {
+const Chip = ({ children, className }: ChipProps) => {
+  const chipStyle = className ? className : '';
   return (
     <div
-      className={`bg-[${background}] text-[${textColor}] flex items-center justify-center rounded-full border border-[var(--color-text-muted)] px-4 py-2 text-lg font-medium border-[${borderColor}]`}
+      className={`flex items-center justify-center rounded-full border border-[var(--color-text-muted)] bg-[var(--color-button-sand)] px-4 py-2 text-lg font-medium text-[var(--color-text-muted)] ${chipStyle}`}
     >
       {children}
     </div>

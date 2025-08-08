@@ -36,21 +36,23 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <Image src="/next.svg" alt="Next.js Logo" width={180} height={37} className="mb-4" />
           <div>안녕하세요 카드입니다.</div>
+          <Chip>산책</Chip>
           <Input
             placeholder="입력하세요"
             inputValue={inputValue}
             setInputValue={setInputValue}
             type="number"
           />
-          <FormItem label="이메일" error={inputValue ? '' : '이메일을 입력해주세요'}>
-            <Select
-              selectedItem={selectedItem}
-              setSelectedItem={setSelectedItem}
-              options={[
-                { label: 'Option 1', value: '1' },
-                { label: 'Option 2', value: '2' },
-                { label: 'Option 3', value: '3' },
-              ]}
+          <FormItem
+            label="이메일"
+            error={inputValue ? '' : '이메일을 입력해주세요'}
+            isError={!inputValue}
+          >
+            <Input
+              placeholder="이메일을 입력하세요"
+              inputValue={inputValue}
+              setInputValue={setInputValue}
+              type="email"
             />
           </FormItem>
           <Button

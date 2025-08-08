@@ -15,7 +15,11 @@ const MainLayout = ({ title, subtitle, children, sidebar }: MainLayoutProps) => 
           {sidebar && <div className="w-[25%]">{sidebar}</div>}
           {/* 내용 */}
           <section className="flex w-full flex-col gap-6">
-            <div className="text-2xl font-semibold text-[var(--color-text-title)]">{subtitle}</div>
+            {subtitle && (
+              <div className="text-2xl font-semibold text-[var(--color-text-title)]">
+                {subtitle}
+              </div>
+            )}
             <div>{children}</div>
           </section>
         </section>

@@ -29,7 +29,7 @@ const Header = () => {
 
         {/* 모바일 메뉴 */}
         {isMenuOpen && (
-          <div className="fixed inset-0 top-16 z-50 h-fit w-full bg-[var(--color-header)] md:hidden">
+          <div className="fixed inset-0 top-[var(--header-height)] z-50 h-fit w-full bg-[var(--color-header)] md:hidden">
             <nav className="border-border border-t px-4 py-4 text-xl font-semibold">
               <div>메뉴</div>
               <div>메뉴</div>
